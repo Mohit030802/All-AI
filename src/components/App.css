@@ -1,0 +1,12 @@
+.main {
+    width: 100vw;
+    min-height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    padding: 120px 24px 160px 24px;
+  
+  }
+  .organe_gradient{
+    @apply bg-gradient-to-r from-[#e9d022] via-[#e60b09] to-[#e9d022] bg-clip-text text-transparent;
+  }

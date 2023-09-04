@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    h1 {
+        font-family: Playfair Display;
+    }
+}
+body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
