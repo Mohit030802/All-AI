@@ -68,8 +68,8 @@ const Search = () => {
                 <div className="flex flex-col justify-center items-center py-4 ">
                     {
                         allArticle?.map((item, index) => (
-                            <div key={`link-${index}`} onClick={() => setArticle(item)} className="bg-[#d5d5d584] p-2 shadow-md">
-                                <div className="flex items-center w-[40vw] m-1 p-1 space-x-2 hover:cursor-pointer">
+                            <div key={`link-${index}`} onClick={() => setArticle(item)} className="bg-[#d5d5d584] p-2 shadow-md ">
+                                <div className="flex items-center w-[40vw] m-1 p-1 space-x-2 hover:cursor-pointer ">
                                     <img width="24" height="24" src={copied===item.url ? tick:copy}  alt="copy" onClick={()=>handleCopy(item.url)}/>
                                     <p className="flex-1 font-sans text-blue-500 font-medium text-sm truncate">{item.url}</p>
                                 </div>
@@ -79,7 +79,7 @@ const Search = () => {
                 </div>
             </div>
             <div className="rounded-xl">
-                <div className="flex justify-center items-center p-2  shadow-xl min-w-full w-[75%] bg-white">
+                <div className="flex justify-center items-center p-2  shadow-xl min-w-full w-[75vw] bg-white">
                     {
                         isFetching ?
                             (

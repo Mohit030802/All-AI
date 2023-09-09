@@ -13,3 +13,17 @@ body{
     width: 100%;
     
 }
+body::-webkit-scrollbar{
+    width:0.5rem;
+    height: 0.5rem;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #000;
+    margin: 2px;
+    padding: 2px;
+    border: 2px solid #f6d5f7;
+    border-radius: 50vw;
+}
+body::-webkit-scrollbar-track{
+    background-color: #f6d5f7;
+}
