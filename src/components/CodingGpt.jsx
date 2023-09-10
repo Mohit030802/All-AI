@@ -23,25 +23,21 @@ const chatgpt = () => {
 
     const options = {
       method: "POST",
-      url: "https://open-ai21.p.rapidapi.com/conversationgpt",
+      url: "https://open-ai21.p.rapidapi.com/askaicoder",
       headers: {
         "content-type": "application/json",
         "X-RapidAPI-Key": "a4aaf17d19msh18ef7777c913113p1f8a2ajsna5656ac932cf",
         "X-RapidAPI-Host": "open-ai21.p.rapidapi.com",
       },
       data: {
-        messages: [
-          {
-            role: "user",
-            content: message,
-          },
-        ],
+        message: message
       },
     };
 
     try {
       const response = await axios.request(options);
       setResponse(response.data);
+      console.log(response.data)
 
       const updatedHistory=[...searchHistory, message]
       setSearchHistory(updatedHistory)
@@ -51,16 +47,8 @@ const chatgpt = () => {
     }
   };
 
-  const formatResponse = (response) => {
-    if (!response) return null;
-
-    // Parse the JSON response and format it with 2-space indentation
-    let gptResponse = response.GPT.replace(/\\nYou can try our new always-free website: https:\/\/chat.acytoo.com.*? directly\."/g, "");
-
-    // Replace any remaining \n with new lines
-    gptResponse = gptResponse.replace(/\\n/g, "\n");
-    return gptResponse;
-  };
+ 
+  
   const handleCopy = (copyUrl) => {
     setCopied(copyUrl)
     navigator.clipboard.writeText(copyUrl)
@@ -73,7 +61,7 @@ const chatgpt = () => {
       <div className="min-h-[100vh]">
         <div className="flex flex-col justify-center items-center ">
           <h1 className="text-6xl font-bold mt-4">
-            Question with <span className="organe_gradient">GPT-3</span>
+            Coding with <span className="organe_gradient">GPT-3</span>
           </h1>
           <p className="text-base font-medium text-gray-500 break-all mt-4">
             GPT-3 API: Smart tool for text, chatbots, translations, and more.
@@ -119,9 +107,9 @@ const chatgpt = () => {
         <div className="flex justify-center items-center rounded-md  min-w-[100%]">
           {response && (
             <div className="flex flex-col rounded-xl bg-white shadow-md p-2 m-2">
-              <h2 className="text-2xl font-bold font-serif">Reponse:</h2>
+              <h2 className="text-2xl font-bold font-serif">Result:</h2>
               <p className="break-words text-gray-500 mt-2">
-                {formatResponse(response)}
+                {JSON.stringify(response, null, 2)}
               </p>
             </div>
           )}

@@ -4,6 +4,8 @@ import Chatgpt from './components/chatgpt'
 import Navbar from './components/Navbar'
 
 import Result from './components/Result'
+import Home from './components/Home'
+import CodingGpt from './components/CodingGpt'
 
 function App() {
 
@@ -15,9 +17,10 @@ function App() {
           <Navbar />
         </div>
         <Routes>
-          <Route path="/" element={<Chatgpt />} />
-          <Route path="/chatgpt" element={<Chatgpt />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/questionGpt" element={<Chatgpt />} />
           <Route path="/summaryAI" element={<Result />} />
+          <Route path="/codingGpt" element={<CodingGpt />} />
         </Routes>
       </div>
     </>

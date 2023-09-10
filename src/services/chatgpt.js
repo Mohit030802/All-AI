@@ -4,7 +4,7 @@ const apiKey = import.meta.env.VITE_RAPID_API_KEY;
 
 const headers = {
   "content-type": "application/json",
-  "x-rapid-api-key": apiKey,
+  "x-rapid-api-key": '79d61ffe18msh14392944de1e02cp1b32d2jsn3bcfc9949a6b',
   "x-rapidapi-host": "open-ai21.p.rapidapi.com",
 };
 

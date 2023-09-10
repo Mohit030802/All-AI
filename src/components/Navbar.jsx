@@ -6,10 +6,14 @@ const Navbar = () => {
   const location=useLocation()
   const getpathName=()=>{
     switch (location.pathname){
-      case '/chatgpt':
-        return 'Chat GPT'
-      case '/summaryAi':
+      case '/':
+        return 'All AI'
+      case '/questionGpt':
+        return 'Question GPT'
+      case '/summaryAI':
         return 'Summary AI'
+      case '/codingGpt':
+        return 'Coding GPT'
       
     }
 
@@ -23,12 +27,12 @@ const Navbar = () => {
         </div>
         <div className='flex space-x-2'>
 
-          <Link to={'/chatgpt'}>
+          <Link to={'/questionGpt'}>
             <div className='flex justify-center items-center text-center bg-black text-white p-2 rounded-lg mr-4'>
-              <button>Chat gpt</button>
+              <button>Question gpt</button>
             </div>
           </Link>
-          <Link to={'/summaryAi'}>
+          <Link to={'/summaryAI'}>
             <div className='flex justify-center items-center text-center bg-black text-white p-2 rounded-lg mr-4'>
               <button>Summary AI</button>
             </div>
