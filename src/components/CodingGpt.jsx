@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { CodeSection } from "react-code-section-lib"
+
 import axios from "axios";
 import copy from '../assets/copy.png'
 import tick from '../assets/tick.png'
@@ -39,7 +43,7 @@ const chatgpt = () => {
       setResponse(response.data);
       console.log(response.data)
 
-      const updatedHistory=[...searchHistory, message]
+      const updatedHistory = [...searchHistory, message]
       setSearchHistory(updatedHistory)
       localStorage.setItem('searchHistory', JSON.stringify(updatedHistory));
     } catch (error) {
@@ -47,8 +51,10 @@ const chatgpt = () => {
     }
   };
 
- 
-  
+  const formatResponse = (response) => {
+    return response.RESULT.replace(/\\n/g, '\n');
+  }
+
   const handleCopy = (copyUrl) => {
     setCopied(copyUrl)
     navigator.clipboard.writeText(copyUrl)
@@ -104,13 +110,16 @@ const chatgpt = () => {
             }
           </div>
         </div>
-        <div className="flex justify-center items-center rounded-md  min-w-[100%]">
+        <div className="flex justify-center items-center rounded-md  ">
           {response && (
-            <div className="flex flex-col rounded-xl bg-white shadow-md p-2 m-2">
-              <h2 className="text-2xl font-bold font-serif">Result:</h2>
-              <p className="break-words text-gray-500 mt-2">
-                {JSON.stringify(response, null, 2)}
-              </p>
+            <div className="flex flex-col rounded-xl bg-white shadow-md p-2 w-[50vw] m-2">
+              
+              <h1 className="text-2xl font-serif font-bold">Result: </h1>
+
+                <CodeSection theme="dark">
+                  {formatResponse(response)}
+                </CodeSection>
+              
             </div>
           )}
 

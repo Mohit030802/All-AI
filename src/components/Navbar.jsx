@@ -21,9 +21,12 @@ const Navbar = () => {
   return (
     <div>
       <div className='flex  justify-between p-4 border-b-2 shadow-md shadow-[#274046]'>
-        <div className='flex ml-4 justify-center items-center text-center space-x-4'>
-          <img src={img} alt="" />
+        <div className='flex ml-4 justify-center items-center '>
+          <Link to={'/'}> 
+          <img src={img} width="48" height="48"  alt="" />
           <h1 className='text-2xl font-bold tracking-widest text-[#1a2a2e]'>{getpathName()}</h1>
+        
+          </Link>
         </div>
         <div className='flex space-x-2'>
 
