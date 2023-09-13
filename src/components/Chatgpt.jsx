@@ -26,7 +26,7 @@ const chatgpt = () => {
       url: "https://open-ai21.p.rapidapi.com/conversationgpt",
       headers: {
         "content-type": "application/json",
-        "X-RapidAPI-Key": "a4aaf17d19msh18ef7777c913113p1f8a2ajsna5656ac932cf",
+        "X-RapidAPI-Key": "6c74ff057bmsh36de890169a88e1p146495jsn0faa64769851",
         "X-RapidAPI-Host": "open-ai21.p.rapidapi.com",
       },
       data: {

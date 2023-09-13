@@ -1,11 +1,12 @@
 import { Routes, Route } from 'react-router-dom'
 
-import Chatgpt from './components/chatgpt'
+import Chatgpt from './components/Chatgpt'
 import Navbar from './components/Navbar'
 
 import Result from './components/Result'
 import Home from './components/Home'
 import CodingGpt from './components/CodingGpt'
+import Imagegpt from './components/Imagegpt'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/questionGpt" element={<Chatgpt />} />
           <Route path="/summaryAI" element={<Result />} />
           <Route path="/codingGpt" element={<CodingGpt />} />
+          <Route path="/imageGpt" element={<Imagegpt />} />
         </Routes>
       </div>
     </>
