@@ -64,7 +64,7 @@ const chatgpt = () => {
   }
   return (
     <>
-      <div className="min-h-[100vh]">
+      <div className="min-h-[100vh] bg-hero-pattern">
         <div className="flex flex-col justify-center items-center ">
           <h1 className="text-6xl font-bold mt-4">
             Coding with <span className="organe_gradient">GPT-3</span>

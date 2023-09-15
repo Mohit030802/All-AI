@@ -3,7 +3,7 @@ import Search from './Search'
 
 const Result = () => {
   return (
-    <div className='min-h-[100vh]'>
+    <div className='min-h-[100vh] bg-hero-pattern'>
       <div className='flex justify-center items-center'>
         <div className='text-6xl font-bold space-y-4 mt-4'>
           <h1>

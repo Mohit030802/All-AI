@@ -56,7 +56,7 @@ const Imagegpt = () => {
     }
     return (
         <>
-            <div className="min-h-[100vh]">
+            <div className="min-h-[100vh] bg-hero-pattern">
                 <div className="flex flex-col justify-center items-center ">
                     <h1 className="text-6xl font-bold mt-4">
                         Generate Image with <span className="organe_gradient">GPT-3</span>
@@ -68,7 +68,7 @@ const Imagegpt = () => {
                 <div className="py-4 mt-4">
                     <form action="" onSubmit={handleSubmit}>
                         <div className="flex flex-col space-y-4 justify-center items-center">
-                            <label htmlFor="" className="text-4xl font-semibold font-serif">
+                           <label htmlFor="" className="text-4xl font-semibold font-serif">
                                 Enter your prompt:
                             </label>
                             <div className="flex space-x-2">

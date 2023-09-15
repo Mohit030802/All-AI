@@ -19,32 +19,27 @@ const Navbar = () => {
 
   }
   return (
-    <div>
-      <div className='flex  justify-between p-4 border-b-2 shadow-md shadow-[#274046]'>
-        <div className='flex ml-4 justify-center items-center '>
-          <Link to={'/'}> 
-          <img src={img} width="48" height="48"  alt="" />
-          <h1 className='text-2xl font-bold tracking-widest text-[#1a2a2e]'>{getpathName()}</h1>
-        
-          </Link>
-        </div>
-        <div className='flex space-x-2'>
+    <div> 
+      <div className='text-[#ffff] backdrop-filter backdrop-blur-lg bg-opacity-95 bg-no-hero border-none flex justify-center items-center text-center text-xl font-serif'>
+        <div className='flex justify-start mr-48 items-center text-center mt-2 mb-2'>
 
-          <Link to={'/questionGpt'}>
-            <div className='flex justify-center items-center text-center bg-black text-white p-2 rounded-lg mr-4'>
-              <button>Question gpt</button>
-            </div>
-          </Link>
-          <Link to={'/summaryAI'}>
-            <div className='flex justify-center items-center text-center bg-black text-white p-2 rounded-lg mr-4'>
-              <button>Summary AI</button>
-            </div>
-          </Link>
-          <Link to={'https://github.com/Mohit030802/SummaryAI'} target='_blank'>
-            <div className='flex justify-center items-center text-center bg-black text-white p-2 rounded-lg mr-4'>
-              <button>GitHub</button>
-            </div>
-          </Link>
+        <img src={img} height="48" width="48" alt="" />
+        <h2 className='font-bold'>{getpathName()}</h2>
+        </div>
+        <div >
+          <ul className='flex justify-center items-center text-center list-none ml-5 space-x-8  text-gray-500'>
+            <li className='hover:underline hover:underline-offset-4 hover:cursor-pointer hover:text-white'>
+              <Link to={'/'}>
+              Home
+              </Link>
+            </li>
+            <li className='hover:underline hover:underline-offset-4 hover:cursor-pointer hover:text-white'>
+              About
+            </li>
+            <li className='hover:underline hover:underline-offset-4 hover:cursor-pointer hover:text-white'>
+              Portfolio
+            </li>
+          </ul>
         </div>
       </div>
     </div>
